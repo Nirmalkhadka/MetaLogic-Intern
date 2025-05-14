@@ -1,0 +1,145 @@
+/* General container for all projects */
+.project-container {
+  margin: 50px;
+}
+
+/* Header styling */
+.project-header {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #003366;
+}
+
+/* Styling for each project card */
+.project-card {
+  display: inline-block;
+  width: 32%;  /* Ensures 3 projects are displayed in a row on larger screens */
+  margin: 1.5%;
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for the project card */
+.project-card:hover {
+  transform: translateY(-10px);  /* Adds a slight lift on hover */
+}
+
+.project-image-container {
+  margin-bottom: 15px;
+}
+
+.project-image {
+  width: 80%;
+  height: 250px;
+  border-radius: 8px;
+}
+
+.project-name {
+  font-size: 1.5rem;
+  color: #003366;
+}
+
+.project-description {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.read-more-btn {
+  background-color: #ff5733;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #e24d2e;
+}
+
+/* Modal for displaying project details */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 70%; /* Default: 70% of screen width */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Modal image container */
+.modal-image-container {
+  width: 45%;
+  margin-top: 10px;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.modal-description {
+  width: 45%;
+  font-size: 1.2rem;
+}
+
+.close-btn {
+  background-color: #ff5733;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .project-card {
+    width: 45%;  /* Two cards per row on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    width: 100%;  /* One card per row on mobile */
+  }
+
+  .modal-content {
+    width: 90%;  /* Adjust modal width for mobile */
+    flex-direction: column;  /* Stack image and description vertically on mobile */
+  }
+
+  .modal-image-container,
+  .modal-description {
+    width: 100%;  /* Full width for both image and description */
+    margin-bottom: 20px;  /* Space between the image and description */
+  }
+}
+.projects{
+    display:flex;
+}

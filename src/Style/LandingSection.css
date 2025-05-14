@@ -1,0 +1,127 @@
+/* LandingSection.css */
+
+/* Section styling */
+.landing-section {
+  background-color: #f5f5f5;
+  padding: 10px 7px;
+  text-align: center;
+}
+
+.landing-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.landing-content {
+  text-align: center;
+}
+
+.landing-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.landing-subheading {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive features section */
+.features {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background-color: #a9a4a459;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  text-align: left;
+  min-width: 250px;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #141414;
+}
+
+
+.feature-icon {
+  /* width: 60px;
+  height: 60px;
+  margin-bottom: 20px; */
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.1); /* Scale the icon on hover */
+}
+
+
+.cta {
+  margin-top: 50px;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  background-color: #ff5733;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #e24d2e;
+}
+/* Adding a background image to the landing section */
+.landing-background {
+  position: relative;
+  background-image: url('../assets/OIP (1).jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+}
+
+.landing-background .container {
+  position: relative;
+  z-index: 1; /* Ensure content is on top of the background */
+}
+
+/* Add a dark overlay to the background image */
+.landing-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(63, 63, 63, 0.4);  
+  z-index: 0;
+}
