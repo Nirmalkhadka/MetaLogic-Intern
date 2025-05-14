@@ -84,10 +84,5 @@ To run this project locally, follow these steps:
 
 This project successfully improves the overall user experience of the Metalogic website by focusing on design improvements, responsiveness, and modern UI/UX practices. The code is modular and easy to scale, and the website is fully responsive across all screen sizes.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
 
 Feel free to update the sections accordingly (like repository URL and specific details) based on your setup and preferences!
