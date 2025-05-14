@@ -6,7 +6,7 @@ const DevelopmentProcess: React.FC = () => {
     {
       title: "Requirement Gathering",
       description: "We listen to your needs and define clear goals for the project.",
-      image: "/download.jpg"
+      image: "/images/download.jpg"
     },
     {
       title: "Design",
@@ -37,17 +37,18 @@ const DevelopmentProcess: React.FC = () => {
     setCurrentStep((prevStep) => (prevStep + 1) % steps.length);
   };
 
-  // Set up the interval for the slideshow, which pauses on hover
-  useEffect(() => {
-    let interval : ReturnType<typeof setInterval>;  
+  // Declare interval variable outside of useEffect
+  let interval: ReturnType<typeof setInterval>;
 
+  useEffect(() => {
+    // Set up the interval for the slideshow, which pauses on hover
     if (!isHovered) {
-      interval = setInterval(nextStep, 2000); 
+      interval = setInterval(nextStep, 2000); // Change interval to 2 seconds (2000ms)
     } else {
-      clearInterval(interval);  
+      clearInterval(interval); // Clear interval when mouse is hovered
     }
 
-    return () => clearInterval(interval);  
+    return () => clearInterval(interval); // Clean up the interval when the component unmounts or isHovered changes
   }, [isHovered]);  
 
   return (
@@ -58,7 +59,6 @@ const DevelopmentProcess: React.FC = () => {
     >
       <h2 className="section-title">How We Build UI/UX for You</h2>
       <div className="steps-container">
-       
         {steps.slice(currentStep, currentStep + 2).map((step, index) => (
           <div key={index} className="step-card">
             <img src={step.image} alt={step.title} className="step-image" />
