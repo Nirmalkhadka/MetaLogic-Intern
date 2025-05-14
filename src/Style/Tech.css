@@ -1,0 +1,99 @@
+/* Tech.css */
+
+/* Basic styling for Tech Stack section */
+.tech-stack-container {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #f8f9fa;
+  position: relative;
+}
+
+/* Tech Stack Title */
+.tech-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #003366;
+  position: relative;
+  text-transform: uppercase;
+}
+
+/* Underline for the tech title */
+.underline {
+  width: 100px;
+  height: 3px;
+  background-color: red;
+  margin: 20px auto;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+
+.tech-title:hover + .underline {
+  transform: scaleX(1);  /* Underline will expand when the title is hovered */
+}
+
+/* Tech Icons Container */
+.tech-icons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  animation: moveTechStack 30s linear infinite;
+  overflow: hidden;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+  padding: 20px;
+  width: 100px; /* Fix width for consistency */
+}
+
+.tech-item p {
+  margin-top: 10px;
+  color: #003366;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+/* Tech Image Frame */
+.tech-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;  /* Small height for the images */
+  width: 60px;   /* Small width for the images */
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tech Image */
+.tech-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Ensures the images don't stretch */
+}
+
+/* Animation for tech logos */
+@keyframes moveTechStack {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .tech-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .tech-item {
+    margin: 20px;
+  }
+}

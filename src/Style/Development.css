@@ -1,0 +1,116 @@
+/* DevelopmentProcess.css */
+.development-process {
+  padding: 3rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  transition: transform 0.5s ease-in-out;
+}
+
+.step-card {
+  width: 500px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #003366;
+  margin-bottom: 2rem;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.step-text {
+  max-width: 500px;
+}
+
+.step-image {
+  width: 95%;
+  padding: 6px 0;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.step-image img {
+    /* background-image: url("./download.jpg"); */
+  max-width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.step-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.step-card h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.step-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .steps-container {
+    flex-direction: column;
+  }
+
+  .step-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* DevelopmentProcess.css */
+
+.development-process {
+  cursor: pointer;  /* Change cursor to pointer when hovering */
+}
+
+.development-process:hover {
+  opacity: 0.9;  /* Add opacity change on hover */
+}
